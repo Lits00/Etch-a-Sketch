@@ -12,8 +12,6 @@ function createDiv(num){
     }
 }
 
-createDiv(defaultGrid);
-
 // resets the grid before creating new divs
 function reset(){
     const boxes = document.querySelectorAll('.gridDiv');
@@ -24,6 +22,8 @@ function reset(){
 function updateValue(val){
     document.querySelector('.displayValue').value=`${val}x${val}`;
     createDiv(val);
-} 
-// Grid section
+}
 
+createDiv(defaultGrid);
+
+// Grid section
