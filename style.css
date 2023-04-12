@@ -33,8 +33,13 @@ body{
     color: #2C3333;
     height: 65vh;
     width: 20vw;
+    padding: 1rem;
 }
 
+input, button{
+    display: block;
+    margin: .5rem auto;
+}
 
 
 .grid-container{
