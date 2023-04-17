@@ -8,32 +8,54 @@
 }
 
 body{
-    background-color: #2C3333;
     text-align: center;
 }
 
+body, .menu, .grid-container{
+    background-color: white;
+}
+
+.main, .contents, .menu{
+    display: flex;
+}
+
 .main{
-    background-color: #395B64;
+    background-color: #F0F5F9;
     border-radius: .5rem;
-    color: #E7F6F2;
+    color: #1E2022;
     margin: 3.5rem auto;
-    padding: 1rem;
+    flex-direction: column;
+    justify-content: center;
     height: 85vh;
     width: 65vw;
+    box-shadow: .6rem .6rem .5rem .2rem;
 }
 
 .contents{
-    margin-top: 3rem;
-    display: flex;
-    justify-content: space-around;
+    margin-top: 1rem;
+    justify-content: space-evenly;
 }
 
 .menu{
-    background-color: #E7F6F2;
-    color: #2C3333;
+    color: #52616B;
     height: 65vh;
-    width: 20vw;
+    width: 12vw;
     padding: 1rem;
+    flex-direction: column;
+    justify-content: space-evenly;
+    border: solid 1px black;
+}
+
+button{
+    border: none;
+    padding: .5rem;
+    border-radius: .5rem;
+    background-color: #F0F5F9;
+}
+
+button:hover{
+    box-shadow: 0 0 .1rem .1rem;
+    cursor: pointer;
 }
 
 input, button{
@@ -42,9 +64,9 @@ input, button{
 }
 
 .grid-container{
-    background-color: white;
+    border: solid 1px black;
     height: 65vh;
-    width: 40vw;
+    width: 48vw;
     display: grid;
     grid-template-columns: var(--grid-columns);
     grid-auto-rows: var(--grid-rows);
