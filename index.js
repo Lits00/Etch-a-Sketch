@@ -5,7 +5,7 @@ const defaultGrid = 16;
 // creates the grid
 function createDiv(num){
     reset();
-    for(i = 0; i < num; i++){
+    for(i = 0; i < (num*num); i++){
         const box = document.createElement('div');
         box.classList.add('gridDiv');
         gridContainer.appendChild(box);
@@ -20,7 +20,11 @@ function reset(){
 
 // responsible for creating and displaying the grid depending on the returnd value of range input
 function updateValue(val){
-    document.querySelector('.displayValue').value=`${val}x${val}`;
+    const gridSize = `${val}x${val}`;
+    document.querySelector('.displayValue').value = gridSize;
+    gridContainer.style.setProperty('--grid-size', val);
+    gridContainer.style.setProperty('--grid-columns', `repeat(${val}, 1fr)`);
+    gridContainer.style.setProperty('--grid-rows', `repeat(${val}, 1fr)`);
     createDiv(val);
 }
 
