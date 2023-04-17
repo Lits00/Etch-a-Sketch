@@ -42,7 +42,7 @@ input, button{
 }
 
 .grid-container{
-    background-color: #E7F6F2;
+    background-color: white;
     height: 65vh;
     width: 40vw;
     display: grid;
